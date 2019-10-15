@@ -2,6 +2,9 @@ package com.rakovets.course.practice.methods;
 
 import com.rakovets.course.util.StandardInputTask;
 
+import javax.sound.midi.Soundbank;
+import java.sql.SQLOutput;
+
 /**
  * Разработать программу для игрового движка:
  * После каждого боя выводится таблица статистики боя для команды. Расположение в данной таблице зависит
@@ -29,6 +32,12 @@ public class Task01 extends StandardInputTask {
 		//TODO
 		// Код, решающий задачу пишем ниже, при этом используя параметры метода
 		// Для проверки решения необходимо запустить @Test для данного class (в директории test)
-		return false;
+
+		boolean top = false;
+		if (sizeTop >= positionPlayerByDamage) {
+			top = true;
+		}
+		return top;
+
 	}
 }
