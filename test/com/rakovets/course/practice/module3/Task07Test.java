@@ -1,6 +1,7 @@
 package com.rakovets.course.practice.module3;
 
-import com.rakovets.course.util.ConsoleTest;
+import com.rakovets.course.util.StandardOutputTest;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Task07Test extends ConsoleTest {
+class Task07Test extends StandardOutputTest {
     static Stream<Arguments> provideYears() {
         return Stream.of(
                 Arguments.of("1", "not a leap year"),
@@ -26,6 +27,6 @@ class Task07Test extends ConsoleTest {
     @DisplayName("Leap-year")
     void test(String input, String expected) {
         Task07.main(new String[]{input});
-        assertEquals(getConsoleContent(), expected);
+        assertEquals(getStandardOutputContentWithTrim(), expected);
     }
 }

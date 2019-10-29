@@ -1,6 +1,6 @@
 package com.rakovets.course.practice.module3;
 
-import com.rakovets.course.util.ConsoleTest;
+import com.rakovets.course.util.StandardOutputTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Task05Test extends ConsoleTest {
+class Task05Test extends StandardOutputTest {
     static Stream<Arguments> monthsProvider() {
         return Stream.of(
                 Arguments.of("1", Month.JANUARY),
@@ -34,6 +34,6 @@ class Task05Test extends ConsoleTest {
     @DisplayName("Month converter")
     void test(String monthNumber, Month expected) {
         Task05.main(new String[]{monthNumber});
-        assertEquals(getConsoleContent(), expected.toString());
+        assertEquals(getStandardOutputContentWithTrim(), expected.toString());
     }
 }

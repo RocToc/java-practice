@@ -1,6 +1,6 @@
 package com.rakovets.course.practice.module3;
 
-import com.rakovets.course.util.ConsoleTest;
+import com.rakovets.course.util.StandardOutputTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Task02Test extends ConsoleTest {
+class Task02Test extends StandardOutputTest {
     static Stream<Arguments> hoursProvider() {
         return Stream.of(
                 Arguments.of("0", "Good night"),
@@ -29,6 +29,6 @@ class Task02Test extends ConsoleTest {
     @DisplayName("Greeting")
     void test(String input, String expected) {
         Task02.main(new String[]{input});
-        assertEquals(getConsoleContent(), expected);
+        assertEquals(getStandardOutputContentWithTrim(), expected);
     }
 }

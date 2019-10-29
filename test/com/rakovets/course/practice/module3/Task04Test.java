@@ -1,6 +1,6 @@
 package com.rakovets.course.practice.module3;
 
-import com.rakovets.course.util.ConsoleTest;
+import com.rakovets.course.util.StandardOutputTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Task04Test extends ConsoleTest {
+class Task04Test extends StandardOutputTest {
     static Stream<Arguments> provideWeekdays() {
         return Stream.of(
                 Arguments.of("1", "monday"),
@@ -28,6 +28,6 @@ class Task04Test extends ConsoleTest {
     @DisplayName("Weekday converter")
     void test(String input, String expected) {
         Task04.main(new String[]{input});
-        assertEquals(getConsoleContent(), expected);
+        assertEquals(getStandardOutputContentWithTrim(), expected);
     }
 }

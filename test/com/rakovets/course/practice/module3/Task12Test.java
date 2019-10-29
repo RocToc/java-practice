@@ -1,6 +1,6 @@
 package com.rakovets.course.practice.module3;
 
-import com.rakovets.course.util.ConsoleTest;
+import com.rakovets.course.util.StandardOutputTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Task12Test extends ConsoleTest {
+class Task12Test extends StandardOutputTest {
     static Stream<Arguments> zodiacsProvider() {
         return Stream.of(
                 Arguments.of(new String[]{"5", "1", "2001"}, "Zodiac Sign: Sea-Goat. Chinese Zodiac: Snake"),
@@ -33,6 +33,6 @@ class Task12Test extends ConsoleTest {
     @DisplayName("Zodiac")
     void test(String[] fuelReserves, String expected) {
         Task12.main(fuelReserves);
-        assertEquals(getConsoleContent(), expected);
+        assertEquals(getStandardOutputContentWithTrim(), expected);
     }
 }

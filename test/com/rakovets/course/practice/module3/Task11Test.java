@@ -1,6 +1,6 @@
 package com.rakovets.course.practice.module3;
 
-import com.rakovets.course.util.ConsoleTest;
+import com.rakovets.course.util.StandardOutputTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Task11Test extends ConsoleTest {
+class Task11Test extends StandardOutputTest {
     static Stream<Arguments> provideSymbols() {
         return Stream.of(
                 Arguments.of("1", "digit"),
@@ -29,6 +29,6 @@ class Task11Test extends ConsoleTest {
     @DisplayName("Symbol-switcher")
     void test(String input, String expected) {
         Task11.main(new String[]{input});
-        assertEquals(getConsoleContent(), expected);
+        assertEquals(getStandardOutputContentWithTrim(), expected);
     }
 }
