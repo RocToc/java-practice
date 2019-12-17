@@ -23,30 +23,43 @@ public class Task05 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        if ( monthNumber == 1 ) {
-            System.out.println("JANUARY");
-        } else if ( monthNumber == 2 ) {
-            System.out.println("FEBRUARY");
-        } else if ( monthNumber == 3 ) {
-            System.out.println("MARCH");
-        } else if ( monthNumber == 4 ) {
-            System.out.println("APRIL");
-        } else if ( monthNumber == 5 ) {
-            System.out.println("MAY");
-        } else if ( monthNumber == 6 ) {
-            System.out.println("JUNE");
-        } else if ( monthNumber == 7 ) {
-            System.out.println("JULY");
-        } else if ( monthNumber == 8 ) {
-            System.out.println("AUGUST");
-        } else if ( monthNumber == 9 ) {
-            System.out.println("SEPTEMBER");
-        } else if ( monthNumber == 10 ) {
-            System.out.println("OCTOBER");
-        } else if ( monthNumber == 11 ) {
-            System.out.println("NOVEMBER");
-        } else if ( monthNumber == 12 ) {
-            System.out.println("DECEMBER");
+        switch (monthNumber) {
+            case 1:
+                System.out.println("JANUARY");
+                break;
+            case 2:
+                System.out.println("FEBRUARY");
+                break;
+            case 3:
+                System.out.println("MARCH");
+                break;
+            case 4:
+                System.out.println("APRIL");
+                break;
+            case 5:
+                System.out.println("MAY");
+                break;
+            case 6:
+                System.out.println("JUNE");
+                break;
+            case 7:
+                System.out.println("JULY");
+                break;
+            case 8:
+                System.out.println("AUGUST");
+                break;
+            case 9:
+                System.out.println("SEPTEMBER");
+                break;
+            case 10:
+                System.out.println("OCTOBER");
+                break;
+            case 11:
+                System.out.println("NOVEMBER");
+                break;
+            case 12:
+                System.out.println("DECEMBER");
+                break;
         }
     }
 }
