@@ -25,9 +25,16 @@ public class Task09 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        int numberApartments = (numberFloors * numberApartmentsPerFloor);
-        int numberPorch = (int)Math.ceil(apartmentNumber / numberApartments);
-        int porch = (int)(numberApartments *(numberPorch(--1)) / apartmentNumber );
-        System.out.println();
+        int porchApartmentsNumber = numberFloors * numberApartmentsPerFloor;
+
+        int porchNumber = (int) Math.ceil((double) apartmentNumber / porchApartmentsNumber);
+        int floorNumber = (int) Math.ceil((double) (apartmentNumber - porchApartmentsNumber * (porchNumber - 1)) / numberApartmentsPerFloor);
+
+
+        System.out.println("Porch: " + porchNumber + ". Floor: " + floorNumber);
     }
 }
+//        int numberApartments = (numberFloors * numberApartmentsPerFloor);
+//        int numberPorch = (int) Math.ceil((double) apartmentNumber / numberApartments);
+//        int floorNumber = (int) Math.ceil((double) (apartmentNumber - numberApartments * (numberPorch - 1)) / numberApartmentsPerFloor);
+//        System.out.println("Porch: " + numberPorch + ", Floor: " + floorNumber);

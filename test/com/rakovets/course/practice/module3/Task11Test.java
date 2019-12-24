@@ -30,5 +30,6 @@ class Task11Test extends StandardOutputTest {
     void test(String input, String expected) {
         Task11.main(new String[]{input});
         assertEquals(getStandardOutputContentWithTrim(), expected);
+
     }
 }
